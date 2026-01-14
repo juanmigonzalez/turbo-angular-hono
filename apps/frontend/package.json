@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "ng serve",
+    "build": "ng build",
+    "lint": "eslint src --ext .ts",
+    "test": "ng test"
+  },
+  "dependencies": {
+    "@angular/common": "^21.0.0",
+    "@angular/compiler": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/forms": "^21.0.0",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/router": "^21.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^21.0.1",
+    "@angular/cli": "^21.0.1",
+    "@angular/compiler-cli": "^21.0.0"
+  }
+}
