@@ -37,7 +37,7 @@ with **Turborepo**.
 ### Tooling
 
 - **Turborepo** 2.10 - Monorepo build system
-- **pnpm** 10.34 - Fast, disk space efficient package manager
+- **pnpm** 12.4 - Fast, disk space efficient package manager
 - **ESLint** 10 - Code linting
 - **Prettier** 3.9 - Code formatting
 - **TypeScript** 6.0 - Type checking
