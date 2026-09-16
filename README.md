@@ -1,12 +1,14 @@
 # 🚀 Turborepo Monorepo Template: Angular + Hono
 
-A modern, production-ready monorepo starter template featuring **Angular 21** (zoneless) for the frontend and **Hono** for the backend API, orchestrated with **Turborepo** for optimal build performance and developer experience.
+A modern, production-oriented monorepo starter featuring **Angular 22**
+(zoneless) for the frontend and **Hono** for the backend API, orchestrated
+with **Turborepo**.
 
 ## ✨ Features
 
-- ⚡ **Angular 21.0** - Latest Angular with zoneless change detection (default)
-- 🔥 **Hono 4.11.4** - Ultra-fast web framework for the Edge, Node.js, and more
-- 🏗️ **Turborepo 2.7** - High-performance build system for JavaScript and TypeScript monorepos
+- ⚡ **Angular 22** - Modern Angular with zoneless change detection by default
+- 🔥 **Hono 4.13** - Ultra-fast web framework for the Edge, Node.js, and more
+- 🏗️ **Turborepo 2.10** - High-performance build system for JavaScript and TypeScript monorepos
 - 🚫 **Zoneless by Default** - Modern Angular without Zone.js for better performance
 - 🔒 **Security First** - Built-in CORS and secure headers (Helmet-like) configuration
 - 📦 **pnpm Workspaces** - Efficient package management with shared dependencies
@@ -14,34 +16,41 @@ A modern, production-ready monorepo starter template featuring **Angular 21** (z
 - 🚀 **TypeScript** - Full type safety across the entire monorepo
 - ⚙️ **Zero Config** - Pre-configured and ready to use out of the box
 - 🎯 **Standalone Components** - Modern Angular architecture
+- 🧪 **Vitest** - Fast, DOM-enabled frontend unit tests
+- ✅ **GitHub Actions** - Automated lint, test, and build checks
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Angular** 21.0 - Modern web application framework
-- **RxJS** 7.8.0 - Reactive programming library
-- **TypeScript** 5.6.3 - Type-safe development
+
+- **Angular** 22 - Modern web application framework
+- **RxJS** 7.8 - Reactive programming library
+- **TypeScript** 6.0 - Type-safe development
 - **Zoneless** - No Zone.js dependency for improved performance
 
 ### Backend
-- **Hono** 4.11.4 - Fast web framework
+
+- **Hono** 4.13 - Fast web framework
 - **@hono/node-server** - Node.js adapter for Hono
-- **TypeScript** 5.6.3 - Full type safety
+- **TypeScript** 6.0 - Full type safety
 
 ### Tooling
-- **Turborepo** 2.7 - Monorepo build system
-- **pnpm** 9.15.0 - Fast, disk space efficient package manager
-- **ESLint** 9.0 - Code linting
-- **Prettier** 3.2.5 - Code formatting
-- **TypeScript** 5.6.3 - Type checking
-- **Angular CLI** 21.0.1 - Angular development tools
+
+- **Turborepo** 2.10 - Monorepo build system
+- **pnpm** 12.4 - Fast, disk space efficient package manager
+- **ESLint** 10 - Code linting
+- **Prettier** 3.9 - Code formatting
+- **TypeScript** 6.0 - Type checking
+- **Angular CLI** 22 - Angular development tools
+- **Vitest** 4.1 with Happy DOM - Unit testing
 
 ## 📋 Prerequisites
 
-- **Node.js** >= 22.0.0 (required by Angular 21)
-- **pnpm** >= 9.15.0
+- **Node.js** >= 22.22.3
+- **Corepack** (included with supported Node.js installations)
 
 If you use `nvm`, you can run:
+
 ```bash
 nvm use
 ```
@@ -51,13 +60,14 @@ nvm use
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/turbo-angular-hono.git
+git clone https://github.com/juanmigonzalez/turbo-angular-hono.git
 cd turbo-angular-hono
 ```
 
 ### 2. Install dependencies
 
 ```bash
+corepack enable
 pnpm install
 ```
 
@@ -68,6 +78,7 @@ pnpm dev
 ```
 
 This will start:
+
 - **Frontend** (Angular): http://localhost:4200
 - **Backend** (Hono): http://localhost:3001
 
@@ -106,6 +117,7 @@ turbo-angular-hono/
 - `pnpm dev` - Start all applications in development mode
 - `pnpm build` - Build all applications for production
 - `pnpm lint` - Run ESLint on all projects
+- `pnpm test` - Run all unit tests once
 - `pnpm format` - Format code with Prettier
 
 ### Frontend (Angular)
@@ -185,7 +197,8 @@ This template uses Angular's standalone component architecture. All components a
 
 ## 📦 Package Management
 
-This template uses **pnpm** workspaces for efficient dependency management. All shared dependencies are hoisted to the root `node_modules`, reducing duplication and installation time.
+This template uses **pnpm** workspaces with a committed lockfile for fast,
+reproducible installations across local development and CI.
 
 ## 🎯 Angular Features
 
@@ -197,6 +210,7 @@ This template uses **pnpm** workspaces for efficient dependency management. All 
 ## 🔍 SEO & Discoverability
 
 This template is optimized for:
+
 - **Monorepo starters** - Turborepo + Angular + Hono
 - **Full-stack TypeScript** - Type-safe frontend and backend
 - **Angular zoneless** - Modern Angular without Zone.js
@@ -221,7 +235,8 @@ MIT License - feel free to use this template for your projects.
 ## 🔗 Related Templates
 
 Looking for other starter templates?
-- [turbo-astro-hono](https://github.com/yourusername/turbo-astro-hono) - Astro + Hono monorepo template
+
+- [turbo-astro-hono](https://github.com/juanmigonzalez/turbo-astro-hono) - Astro + Hono monorepo template
 
 ---
 
