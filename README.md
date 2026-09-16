@@ -18,6 +18,7 @@ with **Turborepo**.
 - 🎯 **Standalone Components** - Modern Angular architecture
 - 🧪 **Vitest** - Fast, DOM-enabled frontend unit tests
 - ✅ **GitHub Actions** - Automated lint, test, and build checks
+- 🤖 **Agent Harness** - Repository contracts, executable guardrails, and one local/CI verification gate
 
 ## 🛠️ Tech Stack
 
@@ -119,6 +120,20 @@ turbo-angular-hono/
 - `pnpm lint` - Run ESLint on all projects
 - `pnpm test` - Run all unit tests once
 - `pnpm format` - Format code with Prettier
+- `pnpm verify:fast` - Run architecture checks, lint, and tests while iterating
+- `pnpm verify` - Run the complete local and CI quality gate
+
+## 🤖 AI agent harness
+
+The template includes a product-agnostic harness so coding agents can work safely and consistently on any application created from it:
+
+- [`AGENTS.md`](AGENTS.md) defines the working contract, boundaries, safety rules, and definition of done.
+- [`docs/architecture.md`](docs/architecture.md) separates stable stack decisions from product choices.
+- [`docs/product-context.md`](docs/product-context.md) is the only context template that should be customized for each product.
+- `pnpm verify` is the shared readiness contract for humans, agents, and GitHub Actions.
+- `scripts/check-architecture.mjs` turns critical boundaries into executable checks instead of relying only on prompts.
+
+When starting a product, fill in `docs/product-context.md` first. Add nested `AGENTS.md` files only when a directory needs stricter local guidance.
 
 ### Frontend (Angular)
 

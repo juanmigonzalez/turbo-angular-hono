@@ -41,7 +41,7 @@ export default tseslint.config(
     files: ['apps/backend/**/*.ts'],
     languageOptions: {
       parserOptions: {
-        project: './apps/backend/tsconfig.json',
+        project: './apps/backend/tsconfig.eslint.json',
         tsconfigRootDir: __dirname,
       },
     },

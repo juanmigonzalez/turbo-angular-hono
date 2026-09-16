@@ -8,10 +8,14 @@
   },
   "scripts": {
     "build": "turbo run build",
+    "check:architecture": "node scripts/check-architecture.mjs",
     "dev": "turbo run dev",
+    "format:check": "prettier --check \"**/*.{ts,tsx,html,css,md,astro,json,mjs,yml,yaml}\"",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "format": "prettier --write \"**/*.{ts,tsx,html,css,md,astro,json}\""
+    "format": "prettier --write \"**/*.{ts,tsx,html,css,md,astro,json,mjs,yml,yaml}\"",
+    "verify:fast": "pnpm check:architecture && pnpm lint && pnpm test",
+    "verify": "pnpm format:check && pnpm verify:fast && pnpm build"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
